@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8080/task-manager/api/task.php';
+const API_URL = 'http://localhost:8090/task-manager/api/task.php';
 
 // Function to fetch and display all tasks
 function fetchTasks() {
