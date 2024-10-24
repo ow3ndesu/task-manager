@@ -3,7 +3,7 @@ class Database {
     private $host = 'db';  // Docker service name for MySQL
     private $db_name = 'task_manager';
     private $username = 'root';
-    private $password = 'example';
+    private $password = 'admin';
     public $conn;
 
     public function getConnection() {
