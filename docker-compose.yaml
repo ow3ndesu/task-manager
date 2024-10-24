@@ -1,4 +1,4 @@
-version: '3'
+version: '3.1'
 
 services:
   php:
@@ -11,20 +11,21 @@ services:
       - app-network
   
   db:
-    image: mysql:latest
+    image: mariadb:10.6
+    restart: always
     volumes:
       - db-data:/var/lib/mysql
     environment:
+      MYSQL_ROOT_PASSWORD: notSecureChangeMe
       MYSQL_DATABASE: task_manager
     ports:
       - "3306:3306"
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin
+    restart: always
     ports:
       - "8091:80"
-    environment:
-      MYSQL_ROOT_PASSWORD: admin
       
 networks:
   app-network:
