@@ -4,7 +4,7 @@ services:
   php:
     build: .
     ports:
-      - "8090:81"
+      - "8090:80"
     volumes:
       - ./src:/var/www/html/task-manager
     networks:
