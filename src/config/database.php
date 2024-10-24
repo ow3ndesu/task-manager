@@ -2,8 +2,8 @@
 class Database {
     private $host = 'db';  // Docker service name for MySQL
     private $db_name = 'task_manager';
-    private $username = 'user';
-    private $password = 'password';
+    private $username = 'root';
+    private $password = 'example';
     public $conn;
 
     public function getConnection() {
