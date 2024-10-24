@@ -11,7 +11,7 @@ services:
       - app-network
   
   db:
-    image: mariadb:10.6
+    image: mysql:latest
     restart: always
     volumes:
       - db-data:/var/lib/mysql
